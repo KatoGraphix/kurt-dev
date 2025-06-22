@@ -36,6 +36,11 @@ const info = [
 
 const EMAILJS_PUBLIC_KEY = 'eYho8VlUe4XckipOb'; // Replace with your actual public key
 
+// Simple sanitization function to strip HTML tags
+function sanitizeInput(input) {
+  return input.replace(/<[^>]*>?/gm, '');
+}
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -75,11 +80,11 @@ const Contact = () => {
 
     try {
       const templateParams = {
-        from_name: `${formData.firstName} ${formData.lastName}`,
-        from_email: formData.email,
-        phone_number: formData.phone,
-        service: formData.service,
-        message: formData.message,
+        from_name: sanitizeInput(`${formData.firstName} ${formData.lastName}`),
+        from_email: sanitizeInput(formData.email),
+        phone_number: sanitizeInput(formData.phone),
+        service: sanitizeInput(formData.service),
+        message: sanitizeInput(formData.message),
         to_name: 'Kurt', // Or whatever name you want to use
       };
 
@@ -119,7 +124,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.1, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
     >

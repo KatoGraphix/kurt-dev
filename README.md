@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kurt Dev Portfolio
+
+A modern developer portfolio built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com/), and [Radix UI](https://www.radix-ui.com/). Showcases work, services, and contact information with a focus on performance and accessibility.
+
+## Features
+- Responsive, mobile-first design
+- Animated transitions and interactive UI
+- Contact form with EmailJS integration
+- Modular, reusable components
+- Dark mode ready (if enabled)
+- Optimized for performance and SEO
 
 ## Getting Started
 
@@ -17,6 +27,18 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+
+## Testing
+
+To run tests (after setup):
+
+```bash
+npm test
+```
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

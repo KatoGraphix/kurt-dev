@@ -3,20 +3,25 @@
 import { delay, motion } from "framer-motion";
 import Image from "next/image";
 
+/**
+ * Photo component displays a profile image with animated transitions and a decorative SVG circle.
+ * Uses Next.js Image for optimization and Framer Motion for animation.
+ * @returns {JSX.Element}
+ */
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
      <motion.div
      initial={{opacity: 0}}
      animate={{ opacity:1,
-        transition: {delay: 2, duration: 0.4, ease: "easeIn"},
+        transition: {delay: 0.1, duration: 0.4, ease: "easeIn"},
      }}
      >
         {/*image*/}
         <motion.div 
         initial={{opacity: 0}}
         animate={{ opacity:1,
-           transition: {delay: 2.4, duration: 0.4, ease: "easeInOut"},
+           transition: {delay: 0.2, duration: 0.4, ease: "easeInOut"},
         }}
         className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
         <Image

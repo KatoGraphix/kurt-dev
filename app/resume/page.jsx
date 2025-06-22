@@ -17,7 +17,7 @@ FaPython }
 //about me 
 const about ={
   title: 'About Me',
-  Description:"Hi, I’m a passionate Software Developer and Graphic Designer with a love for crafting innovative solutions that solve real-world problems. Curiosity fuels my journey, and technology is my playground. I thrive on tackling complex challenges and turning them into seamless, effective solutions. Continuous learning is my mantra, and I enjoy collaborating with others to create meaningful impact while growing together. Whether through code or design, I aim to bring creativity and efficiency to everything I do.",
+  Description:"Hi, I'm a passionate Software Developer and Graphic Designer with a love for crafting innovative solutions that solve real-world problems. Curiosity fuels my journey, and technology is my playground. I thrive on tackling complex challenges and turning them into seamless, effective solutions. Continuous learning is my mantra, and I enjoy collaborating with others to create meaningful impact while growing together. Whether through code or design, I aim to bring creativity and efficiency to everything I do.",
   Info:[
     {
       fieldName:"Name",
@@ -188,7 +188,7 @@ const Resume = () => {
   initial={{opacity:0}}
    animate={{
     opacity:1,
-    transition:{delay:2.4, duration: 0.4,ease: "easeIn"},
+    transition:{delay:0.1, duration: 0.4,ease: "easeIn"},
    }}
 
    className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"

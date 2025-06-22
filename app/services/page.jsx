@@ -22,7 +22,7 @@ const services = [
   {
     num: '03',
     title: 'Branding & Design',
-    description:'From custom logos to unique visuals, we create designs that make your brand stand out and leave a lasting impression. Let’s bring your vision to life!',
+    description: "From custom logos to unique visuals, we create designs that make your brand stand out and leave a lasting impression. Let's bring your vision to life!",
 
   },
   {
@@ -43,7 +43,7 @@ const Services = () => {
       initial={{opacity: 0}}
       animate={{
         opacity:1,
-        transition: {delay:2.4, duration:0.4, ease: "easeIn"},
+        transition: {delay:0.1, duration:0.4, ease: "easeIn"},
       }}
       className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
       >
