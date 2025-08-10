@@ -1,6 +1,6 @@
 "use client";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 /**
@@ -10,32 +10,35 @@ import Image from "next/image";
  */
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex justify-center items-center">
      <motion.div
-     initial={{opacity: 0}}
+     initial={{opacity: 1}}
      animate={{ opacity:1,
         transition: {delay: 0.1, duration: 0.4, ease: "easeIn"},
      }}
+     className="relative w-full h-full"
      >
         {/*image*/}
         <motion.div 
-        initial={{opacity: 0}}
+        initial={{opacity: 1}}
         animate={{ opacity:1,
-           transition: {delay: 0.2, duration: 0.4, ease: "easeInOut"},
+           transition: {delay: 0.15, duration: 0.5, ease: "easeInOut"},
         }}
-        className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
+        className="w-full h-full max-w-[298px] max-h-[298px] xl:max-w-[498px] xl:max-h-[498px] relative">
         <Image
          src="/assets/kd.png"
          priority 
          quality={100}
-          fill
-        alt=""
-         className="object-contain" 
+         width={498}
+         height={498}
+        alt="Kurt Von Schaeffer - Software Developer"
+         className="object-contain w-full h-full" 
+         sizes="(max-width: 1280px) 298px, 498px"
          />
         </motion.div>
 
         {/*circle*/}
-        <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[500px]"
+        <motion.svg className="absolute inset-0 w-full h-full max-w-[300px] max-h-[300px] xl:max-w-[506px] xl:max-h-[506px]"
         fill="transparent"
         viewBox=" 0 0 506 506"
         xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +56,7 @@ const Photo = () => {
             rotate:[120,360],
             }}
             transition={{
-                duration: 20,
+                duration: 10,
                 repeat:Infinity,
                 repeatType:'reverse'
             }}
@@ -63,6 +66,5 @@ const Photo = () => {
         </div>
   );
 };
-
 
 export default Photo;

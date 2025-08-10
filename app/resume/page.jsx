@@ -1,5 +1,4 @@
 "use client";
-import { Description } from '@radix-ui/react-dialog';
 import { icons, Info } from 'lucide-react';
 import{
   FaHtml5,
@@ -7,8 +6,7 @@ import{
   FaJs,
   FaReact, 
   FaFigma,
-  oFaNodeJs,
-FaNodeJs,
+  FaNodeJs,
 FaPython } 
   from 'react-icons/fa';
   import {SiTailwindcss, SiMysql, SiMongodb, SiNextdotjs,  } from 'react-icons/si';
@@ -280,7 +278,7 @@ const Resume = () => {
               <h3 className="text-4xl font-bold">{skills.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.Description}</p>
             </div>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-6">
               {skills.skillList.map((skills, index)=> {
                 return <li key={index}>
                   <TooltipProvider delayDuration={100}>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const social = [
   { icon: <FaGithub />, path: 'https://github.com/KatoGraphix' },
-  { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/' },
+  { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/kurt-von-schaeffer-aa962180' },
   
 ];
 

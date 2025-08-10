@@ -1,43 +1,42 @@
 "use client";
 import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
-import { Description } from '@radix-ui/react-dialog';
-
+import {motion} from "framer-motion";
 
 const services = [
   {
     num: '01',
     title: 'Web Development',
     description:'I build fast, stunning websites that work seamlessly on any device.',
-    href:''
+    href:'/contact'
 
   },
   {
     num: '02',
     title: 'UI/UX Design',
     description:'Crafting intuitive, beautiful designs that elevate user experience and drive engagement. We turn ideas into seamless, user-friendly interfaces that your audience will love.',
-    href:''
+    href:'/contact'
 
   },
   {
     num: '03',
     title: 'Branding & Design',
     description: "From custom logos to unique visuals, we create designs that make your brand stand out and leave a lasting impression. Let's bring your vision to life!",
+    href:'/contact'
 
   },
   {
     num: '04',
     title: 'Software Development',
     description:'custom software solutions built to streamline your business and drive innovation.',
-    href:''
+    href:'/contact'
 
   },
 ]
-import {motion} from "framer-motion"
 
 const Services = () => {
   return (
-  <section className="min-h[80vh]flex flex-col justify-center py-12 xl:py-0"> 
+  <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
     <div className="container mx-auto">
       <motion.div
       initial={{opacity: 0}}
@@ -57,12 +56,13 @@ const Services = () => {
             duration-500">
               {service.num}
               </div>
-            <Link href="{service.href}"
+            <Link href={service.href}
             className="w-[70px] h-[70px] rounded-full bg-white
              group-hover:bg-accent transition-all duration-500 flex 
-             justify-center items-center hover:-rotate-45"
+             justify-center items-center hover:-rotate-45 cursor-pointer"
+             title="Contact us"
              >
-            <BsArrowDownRight className="text-primary text-3xl" />
+            <BsArrowDownRight className="text-primary text-3xl group-hover:text-primary" />
             </Link>
           </div>
           {/*title*/}

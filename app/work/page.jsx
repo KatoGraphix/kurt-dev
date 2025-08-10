@@ -79,31 +79,31 @@ const Work = () => {
   animate={{opacity: 1,
   transition:{ delay:0.1, duration:0.4, ease:"easeIn"}
 }}
-  className="min-h-[80hv] flex flex-col justify-center py-12 xl:px-0"
+  className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
   >
-    <div className="container max-auto">
-      <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-        <div className="w-full xl-w:[50%] xl:h-[460px] flex flex-col
+    <div className="container mx-auto px-4">
+      <div className="flex flex-col xl:flex-row xl:gap-[30px] gap-8">
+        <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
         xl:justify-between order-2 xl:order-none">
           <div className="flex flex-col gap-[30px] h-[50%]">
             {/*outline num */}
-            <div className=" text-8xl leading-none font-extrabold text-transparent
+            <div className="text-4xl sm:text-6xl xl:text-8xl leading-none font-extrabold text-transparent
             text-outline">
               {project.num}
               
             </div>
              {/*project category */}
-             <h2 className="text-[42px] font-bold leading-none text-white
+             <h2 className="text-2xl sm:text-3xl xl:text-[42px] font-bold leading-none text-white
              group-hover:text-accent transition-all duration-500 capitalize">
               {project.category} project
               </h2>
                {/*project description */}
-               <p className="text-white/60">{project.description}</p>
+               <p className="text-sm sm:text-base text-white/60">{project.description}</p>
                {/*project stack */}
-               <ul className="flex gap-4">
+               <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index)=> {
                   return (
-                  <li key={index} className="text-xl text-accent">
+                  <li key={index} className="text-lg xl:text-xl text-accent">
                     {item.name}
                     {/*remove the last comma*/}
                     {index !== project.stack.length -1 && ","}
@@ -152,24 +152,26 @@ const Work = () => {
           <Swiper 
           spaceBetween={0}
            slidesPerView={1} 
-           className="xl:h-[520px] mb-12"
+           className="w-full h-auto min-h-[300px] xl:min-h-[400px] mb-12"
            onSlideChange={handleSlideChange}
           >
             {projects.map((project, index) => {
             return (
             <SwiperSlide key={index} className="w-full">
-              <div className=" h-[460px] relative group flex justify-center
-              items-center bg-pink-50/20">
+              <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] xl:h-[460px] relative group flex justify-center
+              items-center bg-pink-50/20 rounded-lg overflow-hidden">
                  {/*overlay*/}
                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 
                  z-10">
                      {/*image*/}
-                 <div className="relative w-full h-full ">
+                 <div className="relative w-full h-full">
                   <Image 
                   src={project.Image} 
                   fill 
-                  className="object-cover"
-                  alt="" 
+                  className="object-cover object-center"
+                  alt={`${project.title} project screenshot`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  priority={index === 0}
                   />
                  </div>
                  </div>

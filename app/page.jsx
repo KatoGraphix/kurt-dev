@@ -46,7 +46,7 @@ const Home = () => {
           </div>
 
           {/* photo */}
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0 w-full max-w-[300px] xl:max-w-[500px] mx-auto xl:mx-0">
             <Photo />
           </div>
         </div>
