@@ -160,10 +160,7 @@ const Work = () => {
             <SwiperSlide key={index} className="w-full">
               <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] xl:h-[460px] relative group flex justify-center
               items-center bg-pink-50/20 rounded-lg overflow-hidden">
-                 {/*overlay*/}
-                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 
-                 z-10">
-                     {/*image*/}
+                 {/*image*/}
                  <div className="relative w-full h-full">
                   <Image 
                   src={project.Image} 
@@ -174,10 +171,12 @@ const Work = () => {
                   priority={index === 0}
                   />
                  </div>
+                 {/*overlay - moved below image with lower z-index*/}
+                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/5 
+                 z-5">
                  </div>
-                 </div>
-
-              </SwiperSlide>
+              </div>
+            </SwiperSlide>
             );
             })}
             {/*slider button*/}
