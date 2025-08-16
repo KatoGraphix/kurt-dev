@@ -171,10 +171,6 @@ const Work = () => {
                   priority={index === 0}
                   />
                  </div>
-                 {/*overlay - moved below image with lower z-index*/}
-                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/5 
-                 z-5">
-                 </div>
               </div>
             </SwiperSlide>
             );
